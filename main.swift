@@ -50,10 +50,10 @@ class HackerGame {
     private func displayBanner() {
         print("""
         ╔═══════════════════════════════════════════════════════════╗
-        ║                    HACKER SIMULATOR                       ║
+        ║                    HAXX                                   ║
         ║                                                           ║
-        ║    Welcome to the underground world of cyber warfare     ║
-        ║         Type 'help' for available commands               ║
+        ║    Welcome to the underground world of cyber warfare      ║
+        ║         Type 'help' for available commands                ║
         ╚═══════════════════════════════════════════════════════════╝
         """)
     }
@@ -66,8 +66,8 @@ class HackerGame {
             gameState.playerName = "Anonymous"
         }
         
-        print("\nWelcome to the dark web, \(gameState.playerName)...")
-        print("Your reputation precedes you... or does it?")
+        print("\nWelcome to the general access server, \(gameState.playerName)...")
+        print("")
         gameState.displayStats()
     }
     
