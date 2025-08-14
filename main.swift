@@ -33,7 +33,8 @@ class HackerGame {
         "government-db.agency.gov",
         "university-network.edu",
         "hospital-records.medcenter.org",
-        "facebook.com"
+        "metacortex.co.uk"
+        "okinaoshiri.co.jp"
     ]
     
     private let hackingCommands = [
@@ -52,7 +53,8 @@ class HackerGame {
         ╔═══════════════════════════════════════════════════════════╗
         ║                    HAXX                                   ║
         ║                                                           ║
-        ║    Welcome to the underground world of cyber warfare      ║
+        ║               HACK THE PLANET                             ║
+        ║                                                           ║
         ║         Type 'help' for available commands                ║
         ╚═══════════════════════════════════════════════════════════╝
         """)
@@ -84,7 +86,7 @@ class HackerGame {
     }
     
     private func displayPrompt() {
-        let prompt = gameState.isInSystem ? "[\(gameState.currentTarget)]$ " : "darkweb@terminal:~$ "
+        let prompt = gameState.isInSystem ? "[\(gameState.currentTarget)]$ " : "bsd@terminal:~$ "
         print(prompt, terminator: "")
     }
     
@@ -155,7 +157,7 @@ class HackerGame {
         backdoor      - Install persistent backdoor
         disconnect    - Disconnect from current system
         missions      - View available missions
-        shop          - Visit the dark web marketplace
+        shop          - Visit the server marketplace
         clear         - Clear the terminal
         exit          - Exit the game
         
@@ -170,7 +172,7 @@ class HackerGame {
     }
     
     private func scanForTargets() {
-        print("\nScanning the dark web for targets...")
+        print("\nScanning the web for targets...")
         simulateProgress()
         
         print("\n=== AVAILABLE TARGETS ===")
@@ -360,7 +362,7 @@ class HackerGame {
         print("Disconnecting from \(gameState.currentTarget)...")
         gameState.isInSystem = false
         gameState.currentTarget = ""
-        print("Connection closed. Back to the dark web.")
+        print("Connection closed. Back to the open web.")
     }
     
     private func showMissions() {
@@ -380,7 +382,7 @@ class HackerGame {
     private func showShop() {
         print("""
         
-        === DARK WEB MARKETPLACE ===
+        === SERVER MARKETPLACE ===
         1. Advanced Exploit Kit - $200
         2. Zero-Day Vulnerability - $500
         3. Botnet Access - $300
@@ -391,6 +393,21 @@ class HackerGame {
         [Type 'buy <item>' to purchase]
         """)
     }
+    
+    /*
+     private func buyFromMarketPlace{
+     
+     
+     }
+     */
+    
+    /*
+     private func startMission{
+     print("Okay /(playerName) here's the deal..
+     
+     
+     }
+     */
     
     private func simulateProgress(duration: Int = 1) {
         let chars = ["|", "/", "-", "\\"]
@@ -407,7 +424,7 @@ class HackerGame {
     }
     
     private func exitGame() {
-        print("\nDisconnecting from the dark web...")
+        print("\nDisconnecting from the server...")
         print("Your final stats:")
         gameState.displayStats()
         print("Thanks for playing Hacker Simulator!")
