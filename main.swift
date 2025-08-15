@@ -33,13 +33,13 @@ class HackerGame {
         "government-db.agency.gov",
         "university-network.edu",
         "hospital-records.medcenter.org",
-        "metacortex.co.uk"
+        "metacortex.co.uk",
         "okinaoshiri.co.jp"
     ]
     
     private let hackingCommands = [
         "scan", "nmap", "exploit", "crack", "backdoor", "download", 
-        "upload", "delete", "trace", "proxy", "decrypt", "bruteforce"
+        "upload", "delete", "trace", "proxy", "decrypt", "bruteforce","ddos"
     ]
     
     func start() {
@@ -119,6 +119,8 @@ class HackerGame {
             }
         case "download":
             downloadFiles()
+        case "ddos":
+            ddos()
         case "backdoor":
             installBackdoor()
         case "disconnect", "exit":
@@ -183,6 +185,7 @@ class HackerGame {
         print("========================\n")
     }
     
+
     private func connectToTarget(_ target: String) {
         let fullTarget = target.contains(".") ? target : availableTargets.first { $0.contains(target) } ?? target
         
@@ -198,6 +201,19 @@ class HackerGame {
         } else {
             print("Connection failed. Target may be protected or offline.")
         }
+    }
+    
+    private func ddos(){
+        guard gameState.isInSystem else {
+            print("No targets specified")
+            return
+        }
+        print("Initializing Botnet...")
+        simulateProgress()
+        print("Botnet active. Sending Requests...")
+        simulateProgress()
+        print("Target brought offline due to excessive requests from Botnet")
+        gameState.reputation += 5
     }
     
     private func performNmap() {
@@ -395,7 +411,7 @@ class HackerGame {
     }
     
     /*
-     private func buyFromMarketPlace{
+     private func buyFromMarketPlace(int: selection){
      
      
      }
