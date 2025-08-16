@@ -10,6 +10,8 @@ class GameState {
     var isInSystem: Bool = false
     var discoveredSystems: [String] = []
     var completedMissions: [String] = []
+    var shopSelect: Int = 0
+    var inventory: [String] = []
     
     func displayStats() {
         print("\n=== HACKER PROFILE ===")
@@ -408,11 +410,13 @@ class HackerGame {
         Your Credits: $\(gameState.money)
         [Type 'buy <item>' to purchase]
         """)
+        //buyFromShop(selection)
     }
     
     /*
-     private func buyFromMarketPlace(int: selection){
-     
+     private func buyFromShop(selection:Int){
+      var sdiybt = selection
+     selection = ""
      
      }
      */
