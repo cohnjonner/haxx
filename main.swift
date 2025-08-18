@@ -133,6 +133,16 @@ class HackerGame {
             }
         case "missions":
             showMissions()
+        case "mission1":
+            missionOne()
+        case "mission2":
+            missionTwo()
+        case "mission3":
+            missionThree()
+        case "mission4":
+            missionFour()
+        case "mission5":
+            missionFive()
         case "shop":
             showShop()
         case "clear":
@@ -421,13 +431,46 @@ class HackerGame {
      }
      */
     
-    /*
-     private func startMission{
-     print("Okay /(playerName) here's the deal..
-     
-     
-     }
-     */
+    private func missionOne(){
+        print("Connecting to Mission ListServ")
+        simulateProgress()
+        clearScreen()
+        print("That's all i got for now")
+        usleep(2500000)
+        clearScreen()
+    }
+    private func missionTwo(){
+        print("Connecting to Mission ListServ")
+        simulateProgress()
+        clearScreen()
+        print("That's all i got for now")
+        usleep(2500000)
+        clearScreen()
+    }
+    private func missionThree(){
+        print("Connecting to Mission ListServ")
+        simulateProgress()
+        clearScreen()
+        print("That's all i got for now")
+        usleep(2500000)
+        clearScreen()
+    }
+    private func missionFour(){
+        print("Connecting to Mission ListServ")
+        simulateProgress()
+        clearScreen()
+        print("That's all i got for now")
+        usleep(2500000)
+        clearScreen()
+    }
+    private func missionFive(){
+        print("Connecting to Mission ListServ")
+        simulateProgress()
+        clearScreen()
+        print("That's all i got for now")
+        usleep(2500000)
+        clearScreen()
+    }
     
     private func simulateProgress(duration: Int = 1) {
         let chars = ["|", "/", "-", "\\"]
