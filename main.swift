@@ -224,8 +224,15 @@ class HackerGame {
         simulateProgress()
         print("Botnet active. Sending Requests...")
         simulateProgress()
-        print("Target brought offline due to excessive requests from Botnet")
-        gameState.reputation += 5
+        let success = Int.random(in: 1...10) > 3
+        if success {
+            print("Pinging target...")
+            simulateProgress()
+            print("target offline and non-responsive to pings")
+            gameState.reputation += 5
+        } else{
+            print("Target traffic likely filtered")
+        }
     }
     
     private func performNmap() {
