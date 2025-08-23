@@ -422,21 +422,62 @@ class HackerGame {
         2. Zero-Day Vulnerability - $500
         3. Botnet Access - $300
         4. Encrypted VPN - $100
-        5. Fake Identity Package - $150
+        5. Identity Spoofing Package - $150
         
         Your Credits: $\(gameState.money)
         [Type 'buy <item>' to purchase]
         """)
-        //buyFromShop(selection)
+        buyFromShop(selection)
     }
     
-    /*
+    
      private func buyFromShop(selection:Int){
-      var sdiybt = selection
-     selection = ""
-     
+         
+/*         guard let selection = Int(String(selection)) else return
+         switch (Int selection){
+         case 1:
+             print("Advanced Exploit Kit purchased. Downloading from store to client HDD.")
+             simulateProgress()
+             //need inventory management to add product
+             gameState.money -= 200
+             usleep(1800000)
+             clearScreen()
+         case 2:
+             print("Zero Day Vulnerability purchased.Downloading from store to client HDD.")
+             simulateProgress()
+             //need inventory management to add product
+             gameState.money -= 500
+             usleep(1800000)
+             clearScreen()
+         case 3:
+             print("Botnet access purchased.Downloading from store to client HDD.")
+             simulateProgress()
+             //need inventory management to add product
+             gameState.money -= 300
+             usleep(1800000)
+             clearScreen()
+         case 4:
+             print("Encrypted VPN purchased.Downloading from store to client HDD.")
+             simulateProgress()
+             //need inventory management to add product
+             gameState.money -= 100
+             usleep(1800000)
+             clearScreen()
+         case 5:
+             print("Identity Spoofing Package purchased.Downloading from store to client HDD.")
+             simulateProgress()
+             //need inventory management to add product
+             gameState.money -= 150
+             usleep(1800000)
+             clearScreen()
+         }
+     default:
+         print("command not recognized")
+         usleep(2500000)
+         clearScreen()
+      */
      }
-     */
+     
     
     private func missionOne(){
         print("Connecting to Mission ListServ")
