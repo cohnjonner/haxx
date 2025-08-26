@@ -427,13 +427,13 @@ class HackerGame {
         Your Credits: $\(gameState.money)
         [Type 'buy <item>' to purchase]
         """)
-        buyFromShop(selection)
+        //buyFromShop(selection)
     }
     
     
-     private func buyFromShop(selection:Int){
+    /*private func buyFromShop(selection:Int){
          
-/*         guard let selection = Int(String(selection)) else return
+         guard let selection = Int(String(selection)) else return
          switch (Int selection){
          case 1:
              print("Advanced Exploit Kit purchased. Downloading from store to client HDD.")
@@ -470,13 +470,12 @@ class HackerGame {
              gameState.money -= 150
              usleep(1800000)
              clearScreen()
-         }
      default:
          print("command not recognized")
          usleep(2500000)
          clearScreen()
-      */
-     }
+         }
+          }*/
      
     
     private func missionOne(){
