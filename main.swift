@@ -431,51 +431,35 @@ class HackerGame {
     }
     
     
-    /*private func buyFromShop(selection:Int){
-         
-         guard let selection = Int(String(selection)) else return
-         switch (Int selection){
-         case 1:
-             print("Advanced Exploit Kit purchased. Downloading from store to client HDD.")
-             simulateProgress()
-             //need inventory management to add product
-             gameState.money -= 200
-             usleep(1800000)
-             clearScreen()
-         case 2:
-             print("Zero Day Vulnerability purchased.Downloading from store to client HDD.")
-             simulateProgress()
-             //need inventory management to add product
-             gameState.money -= 500
-             usleep(1800000)
-             clearScreen()
-         case 3:
-             print("Botnet access purchased.Downloading from store to client HDD.")
-             simulateProgress()
-             //need inventory management to add product
-             gameState.money -= 300
-             usleep(1800000)
-             clearScreen()
-         case 4:
-             print("Encrypted VPN purchased.Downloading from store to client HDD.")
-             simulateProgress()
-             //need inventory management to add product
-             gameState.money -= 100
-             usleep(1800000)
-             clearScreen()
-         case 5:
-             print("Identity Spoofing Package purchased.Downloading from store to client HDD.")
-             simulateProgress()
-             //need inventory management to add product
-             gameState.money -= 150
-             usleep(1800000)
-             clearScreen()
+    private func buyFromShop(selection:Int){
+     switch Int(selection) {
+     case 1:
+         print("Advanced Exploit Kit purchased")
+         simulateProgress()
+         //add item to players inventory. probably by using an array.
+         gameState.money -= 200
+     case 2:
+         print("Zero-Day Vulnerability purchased.")
+         simulateProgress()
+         gameState.money -= 500
+     case 3:
+         print("Botnet Access purchased.")
+         simulateProgress()
+         gameState.money -= 300
+     case 4:
+         print("Encrypted VPN purchased.")
+         simulateProgress()
+         gameState.money -= 100
+     case 5:
+         print("Identity Spoofing Package purchased.")
+         simulateProgress()
+         gameState.money -= 150
+    
      default:
-         print("command not recognized")
-         usleep(2500000)
-         clearScreen()
-         }
-          }*/
+         print("IDK Man")
+     }
+         
+          }
      
     
     private func missionOne(){
