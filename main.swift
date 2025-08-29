@@ -458,7 +458,7 @@ class HackerGame {
      default:
          print("IDK Man")
      }
-         
+      processCommand(String(selection))
           }
      
     
