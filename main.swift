@@ -113,6 +113,8 @@ class HackerGame {
             performNmap()
         case "exploit":
             attemptExploit()
+        case "buy":
+            buyFromShop(selection:4)
         case "crack":
             if parts.count > 1 {
                 crackPassword(String(parts[1]))
@@ -289,7 +291,7 @@ class HackerGame {
         print("Initiating brute force attack on \(type) password...")
         simulateProgress(duration: 3)
         
-        let passwords = ["password123", "admin", "123456", "qwerty", "letmein", "password"]
+        let passwords = ["password123", "admin", "123456", "qwerty", "letmein", "password","bensmom","girlboss93"]
         let crackedPassword = passwords.randomElement()!
         
         let success = Int.random(in: 1...10) > 4
@@ -315,7 +317,7 @@ class HackerGame {
         
         print("Downloading \(targetFile)...")
         simulateProgress(duration: 2)
-        
+        //needs to respond to user prompt on specificity
         let success = Int.random(in: 1...10) > 3
         
         if success {
@@ -466,8 +468,10 @@ class HackerGame {
         print("Connecting to Mission ListServ")
         simulateProgress()
         clearScreen()
-        print("That's all i got for now")
-        usleep(2500000)
+        var missionTarget = availableTargets.randomElement()!
+        print("From: Anonymous@Listserv")
+        print("I need you to hack in to \(missionTarget) and download a database file that will provide us a financial benefit. You will be financially compensated appropriately. ")
+        usleep(9500000)
         clearScreen()
     }
     private func missionTwo(){
