@@ -1,4 +1,4 @@
-import Foundation
+miimport Foundation
 
 // MARK: - Game State
 class GameState {
@@ -12,6 +12,8 @@ class GameState {
     var completedMissions: [String] = []
     var shopSelect: Int = 0
     var inventory: [String] = []
+    var currentMission: String = ""
+    var missionVerb: String = ""
     
     func displayStats() {
         print("\n=== HACKER PROFILE ===")
@@ -43,6 +45,8 @@ class HackerGame {
         "scan", "nmap", "exploit", "crack", "backdoor", "download", 
         "upload", "delete", "trace", "proxy", "decrypt", "bruteforce","ddos"
     ]
+    
+    private let hackingMissions = [ "steal a database file","take a website offline","upload a virus to a company server"]
     
     func start() {
         displayBanner()
@@ -436,29 +440,55 @@ class HackerGame {
     private func buyFromShop(selection:Int){
      switch Int(selection) {
      case 1:
-         print("Advanced Exploit Kit purchased")
          simulateProgress()
-         //add item to players inventory. probably by using an array.
-         gameState.money -= 200
+         if money >= 200 {
+             inventory.append("Advanced Exploit Kit")
+             gameState.money -= 200
+             print("Advanced Exploit Kit purchased")
+         } else {
+             print("Insufficient funds to purchase this item")
+         }
+ 
      case 2:
-         print("Zero-Day Vulnerability purchased.")
          simulateProgress()
-         gameState.money -= 500
+         if money >= 500 {
+             inventory.append("Zero Day Vulnerability")
+             gameState.money -= 500
+             print("Zero Day Vulnerability purchased")
+         } else {
+             print("Insufficient funds to purchase this item")
+         }
+
      case 3:
-         print("Botnet Access purchased.")
          simulateProgress()
-         gameState.money -= 300
+         if money >= 300 {
+             inventory.append("Botnet Access")
+             gameState.money -= 300
+             print("Botnet Access purchased")
+         } else {
+             print("Insufficient funds to purchase this item")
+         }
      case 4:
-         print("Encrypted VPN purchased.")
          simulateProgress()
-         gameState.money -= 100
+         if money >= 300 {
+             inventory.append("Encrypted VPN")
+             gameState.money -= 300
+             print("Encrypted VPN purchased")
+         } else {
+             print("Insufficient funds to purchase this item")
+         }
      case 5:
-         print("Identity Spoofing Package purchased.")
          simulateProgress()
-         gameState.money -= 150
+         if money >= 150 {
+             inventory.append("Indentity Spoofing Package")
+             gameState.money -= 150
+             print("Indentity Spoofing Package purchased")
+         } else {
+             print("Insufficient funds to purchase this item")
+         }
     
      default:
-         print("IDK Man")
+         print("Invalid Command")
      }
       processCommand(String(selection))
           }
@@ -469,8 +499,9 @@ class HackerGame {
         simulateProgress()
         clearScreen()
         var missionTarget = availableTargets.randomElement()!
+        var missionVerb = hackingMissions.randomElement()!
         print("From: Anonymous@Listserv")
-        print("I need you to hack in to \(missionTarget) and download a database file that will provide us a financial benefit. You will be financially compensated appropriately. ")
+        print("I need you to hack in to \(missionTarget) and \(missionVerb) that will provide us a financial benefit. You will be financially compensated appropriately. ")
         usleep(9500000)
         clearScreen()
     }
