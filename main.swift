@@ -442,9 +442,9 @@ class HackerGame {
      switch Int(selection) {
      case 1:
          simulateProgress()
-         if humper.money >= 200 {
-             humper.inventory.append("Advanced Exploit Kit")
-             humper.money -= 200
+         if gameState.money >= 200 {
+             gameState.inventory.append("Advanced Exploit Kit")
+             gameState.money -= 200
              print("Advanced Exploit Kit purchased")
          } else {
              print("Insufficient funds to purchase this item")
