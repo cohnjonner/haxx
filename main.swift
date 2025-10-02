@@ -1,4 +1,4 @@
-miimport Foundation
+import Foundation
 
 // MARK: - Game State
 class GameState {
