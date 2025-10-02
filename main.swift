@@ -31,6 +31,8 @@ class HackerGame {
     private let gameState = GameState()
     private var isRunning = true
     
+    var humper = GameState()
+    
     private let availableTargets = [
         "corporate-server-001.megacorp.com",
         "banking-system.firstbank.net",
@@ -437,13 +439,13 @@ class HackerGame {
     }
     
     
-    private func buyFromShop(selection:Int){
+    func buyFromShop(selection:Int){
      switch Int(selection) {
      case 1:
          simulateProgress()
-         if money >= 200 {
-             inventory.append("Advanced Exploit Kit")
-             gameState.money -= 200
+         if humper.money >= 200 {
+             humper.inventory.append("Advanced Exploit Kit")
+             humper.money -= 200
              print("Advanced Exploit Kit purchased")
          } else {
              print("Insufficient funds to purchase this item")
@@ -451,9 +453,9 @@ class HackerGame {
  
      case 2:
          simulateProgress()
-         if money >= 500 {
-             inventory.append("Zero Day Vulnerability")
-             gameState.money -= 500
+         if humper.money >= 500 {
+             humper.inventory.append("Zero Day Vulnerability")
+             humper.money -= 500
              print("Zero Day Vulnerability purchased")
          } else {
              print("Insufficient funds to purchase this item")
@@ -461,27 +463,27 @@ class HackerGame {
 
      case 3:
          simulateProgress()
-         if money >= 300 {
-             inventory.append("Botnet Access")
-             gameState.money -= 300
+         if humper.money >= 300 {
+             humper.inventory.append("Botnet Access")
+             humper.money -= 300
              print("Botnet Access purchased")
          } else {
              print("Insufficient funds to purchase this item")
          }
      case 4:
          simulateProgress()
-         if money >= 300 {
-             inventory.append("Encrypted VPN")
-             gameState.money -= 300
+         if humper.money >= 300 {
+             humper.inventory.append("Encrypted VPN")
+             humper.money -= 300
              print("Encrypted VPN purchased")
          } else {
              print("Insufficient funds to purchase this item")
          }
      case 5:
          simulateProgress()
-         if money >= 150 {
-             inventory.append("Indentity Spoofing Package")
-             gameState.money -= 150
+         if humper.money >= 150 {
+             humper.inventory.append("Indentity Spoofing Package")
+             humper.money -= 150
              print("Indentity Spoofing Package purchased")
          } else {
              print("Insufficient funds to purchase this item")
