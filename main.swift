@@ -499,8 +499,8 @@ class HackerGame {
         print("Connecting to Mission ListServ")
         simulateProgress()
         clearScreen()
-        var missionTarget = availableTargets.randomElement()!
-        var missionVerb = hackingMissions.randomElement()!
+        let missionTarget = availableTargets.randomElement()!
+        let missionVerb = hackingMissions.randomElement()!
         print("From: Anonymous@Listserv")
         print("I need you to hack in to \(missionTarget) and \(missionVerb) that will provide us a financial benefit. You will be financially compensated appropriately. ")
         usleep(9500000)
