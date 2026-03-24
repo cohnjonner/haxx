@@ -318,7 +318,11 @@ class HackerGame {
         
         let files = ["financial_records.db", "user_passwords.txt", "classified_docs.pdf", 
                     "source_code.zip", "customer_data.csv"]
+        /*
+        let fileIndexStart = Int.Random(in:0...4)
+        let fileIndexEnd = Int.Random(in:0...4)
         let targetFile = files.randomElement()!
+         */
         
         print("Downloading \(targetFile)...")
         simulateProgress(duration: 2)
