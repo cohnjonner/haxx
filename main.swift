@@ -320,9 +320,9 @@ class HackerGame {
                     "source_code.zip", "customer_data.csv"]
         /*
         let fileIndexStart = Int.Random(in:0...4)
-        let fileIndexEnd = Int.Random(in:0...4)
-        let targetFile = files.randomElement()!
-         */
+        let fileIndexEnd = Int.Random(in:0...4)*/
+        let targetFile = files.randomElement()! 
+         
         
         print("Downloading \(targetFile)...")
         simulateProgress(duration: 2)
