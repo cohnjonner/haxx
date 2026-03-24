@@ -319,9 +319,14 @@ class HackerGame {
         let files = ["financial_records.db", "user_passwords.txt", "classified_docs.pdf", 
                     "source_code.zip", "customer_data.csv"]
         /*
+        //first lil start of the logic to grab a set number of the files array at random and display it to user
         let fileIndexStart = Int.Random(in:0...4)
-        let fileIndexEnd = Int.Random(in:0...4)*/
-        let targetFile = files.randomElement()! 
+         let fileIndexEnd = Int.Random(in:0...4)
+         if fileIndexStart != fileIndexEnd {
+          let targetFile = files.randomElement()!
+         } else {fileIndexEnd = Int.Random(in:0...4)}
+         */
+        let targetFile = files.randomElement()!
          
         
         print("Downloading \(targetFile)...")
